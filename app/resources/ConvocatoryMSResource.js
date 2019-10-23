@@ -9,3 +9,8 @@ ConvocatoryMSResource.init = () => {
 };
 
 ConvocatoryMSResource.modifyAnnouncement = announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
+
+ConvocatoryMSResource.singUp = (signUpAnnoucement) => {
+  // implementar validacion de estudiante existente (falta funcionalidad)
+  return HTTPClient.post(BASE_URL+"/convocatorias/inscibirse/", signUpAnnoucement);
+};
