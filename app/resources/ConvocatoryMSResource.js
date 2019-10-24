@@ -7,3 +7,8 @@ const BASE_URL = `${MICROSERVICE_URL}/api/convocatoria/`;
 ConvocatoryMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
+
+ConvocatoryMSResource.modifyAnnouncement = (announcement) => {
+
+  return HTTPClient.put(BASE_URL+"/convocatorias/", announcement);
+};
