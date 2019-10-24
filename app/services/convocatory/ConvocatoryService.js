@@ -1,9 +1,13 @@
 const ConvocatoryServices = module.exports;
 const ConvocatoryMSResource = require('../../resources/ConvocatoryMSResource');
+const StudentMSResource = require('../../resources/StudentsMSResource');
 
 ConvocatoryServices.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
 ConvocatoryServices.signUp = (studentAnnoucement) => {
-    // implementar validacion de estudiante existente (no esta la funcionalidad en el student-ms)
+    const studentToValidate = await StudentMSResource.get(studentAnnoucement.id_estudiante);
+    console.log(studentToValidate);
+    if (!studentToValidate) throw ErrorHandler.BaseError('student not exists', 409);
+
     return ConvocatoryMSResource.singUp(studentAnnoucement);
 };
