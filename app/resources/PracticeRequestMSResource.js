@@ -19,3 +19,5 @@ PracticeRequestMSResource.registerRequestStudent = (requestStudent) => {
 
   return HTTPClient.post(url, requestStudent);
 };
+PracticeRequestMSResource.editStatus = request =>
+  HTTPClient.put(`${BASE_URL} /solicitud/ `, request);

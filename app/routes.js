@@ -24,6 +24,7 @@ router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomol
 
 /* Practice Request Routes */
 router.post('/solicitudes/request_company', PracticeRequestController.registerEnterpriseRequest);
+router.put('/solicitud/:id(\\d+)', PracticeRequestController.editStatus);
 
 router.post('/evaluation/register', EvaluationController.registerEvaluation);
 
