@@ -8,7 +8,7 @@ EvaluationMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-EvaluationMSResource.singUp = (evala) => {
+EvaluationMSResource.registerEvaluation = (evala) => {
 
   return HTTPClient.post(BASE_URL+"/evaluation/", evala);
 };
