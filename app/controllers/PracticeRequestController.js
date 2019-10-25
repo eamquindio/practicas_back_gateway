@@ -8,10 +8,10 @@ PracticeRequestController.registerEnterpriseRequest = async (req, res, next) => 
   try {
     const result = await PracticeRequestService.registerEnterpriseRequest(body);
 
-PracticeRequestController.modifyRequestStatus = async (req, res, next) => {
+PracticeRequestController.editStatus = async (req, res, next) => {
   const { body } = req;
   try {
-    const result = await PracticeRequestServices.modifyRequestStatus(body);
+    const result = await PracticeRequestServices.editStatus(body);
 
     return res.send(result);
   } catch (error) {
