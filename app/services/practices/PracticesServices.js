@@ -26,6 +26,7 @@ PracticesServices.Registerpractices = (Practices) => {
 
   return PracticesMSResource.singUp(Practices);
 };
+
 PracticesServices.getTypePractice = async () => {
   const types = PracticesMSResource.getTypePractices();
 

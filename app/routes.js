@@ -36,6 +36,7 @@ router.post('/solicitudes/request_student', RequestStudentController.registerReq
 /* Psicology Routes */
 router.put('/appointment', AppointmenController.modifyAppointmen);
 
+
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
 router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 
