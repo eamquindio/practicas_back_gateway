@@ -21,8 +21,14 @@ PracticesServices.getPracticesWithStudentInfo = async () => {
   });
 };
 
+<<<<<<< 8b5f02f9fc5eb8daff08693341434fd465c80629
 PracticesServices.getTypePractice = async () => {
   const types = PracticesMSResource.getTypePractices();
 
   return types;
+=======
+PracticesServices.Registerpractices = (Practices) => {
+
+  return PracticesMSResource.singUp(Practices);
+>>>>>>> iniciar_practica_gatwey
 };

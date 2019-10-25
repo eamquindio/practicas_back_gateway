@@ -39,4 +39,7 @@ router.put('/appointment', AppointmenController.modifyAppointmen);
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
 router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 
+router.post('/practices/incioPractices',PracticesController.registerPractices)
+
+
 module.exports = router;
