@@ -11,16 +11,20 @@ PracticesMSResource.getPractices = () => {
 };
 
 
+
 PracticesMSResource.getTypePractices = () => {
   const url = `${BASE_URL}/tipo_practica`;
 
   return HTTPClient.get(url);
 };
 
-PracticesMSResource.postPractices = () =>{
+
+
+PracticesMSResource.postPractices = () => {
+
   const url = `${BASE_URL}/practica_estudiante`;
 
   return HTTPClient.post(url);
 
-}
+};
 
