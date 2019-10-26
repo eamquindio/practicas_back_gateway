@@ -13,3 +13,5 @@ ConvocatoryMSResource.modifyAnnouncement = announcement => HTTPClient.put(`${BAS
 ConvocatoryMSResource.singUp = (signUpAnnoucement) => {
   return HTTPClient.post(BASE_URL+"/convocatorias/inscibirse/", signUpAnnoucement);
 };
+ConvocatoryMSResource.listAnnouncement = listannouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `, listannouncement);
+
