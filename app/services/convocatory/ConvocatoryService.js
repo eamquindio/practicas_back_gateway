@@ -11,3 +11,4 @@ ConvocatoryServices.signUp = (studentAnnoucement) => {
 
     return ConvocatoryMSResource.singUp(studentAnnoucement);
 };
+ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);

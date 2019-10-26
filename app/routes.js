@@ -20,4 +20,6 @@ router.post('/solicitudes/request_company', PracticeRequestController.registerEn
 
 router.post('/evaluation/register', EvaliationController.registerEvaluation);
 
+router.get('/Convocatorias/list' , ConvocatoryController.listAnnouncement);
+
 module.exports = router;

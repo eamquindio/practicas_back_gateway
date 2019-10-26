@@ -20,10 +20,16 @@ ConvocatoryController.signUp = async (req, res, next) => {
     body.id_convocatoria = id;
     const result = await ConvocatoryService.signUp(body);
 
+ConvocatoryController.listAnnouncement = async (req, res, next) => {
+  const { body } = req;
+  try {
+    const result = await ConvocatoryService.listAnnouncement(body);
+
     return res.send(result);
   } catch (error) {
     console.log({ error });
 
     return next(error);
   }
+};
 };
