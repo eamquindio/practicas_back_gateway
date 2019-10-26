@@ -3,5 +3,5 @@ const EvaluationMSResource = require('../../resources/EvaluationMSResource');
 
 EvaluationServices.registerEvaluation = (evalution) => {
 
-    return EvaluationMSResource.singUp(evalution);
+    return EvaluationMSResource.registerEvaluation(evalution);
 };
