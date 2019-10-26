@@ -7,3 +7,8 @@ const BASE_URL = `${MICROSERVICE_URL}/api/psicologia/`;
 PsicologyMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
+
+PsicologyMSResource.appoimentSet = (appoiment) => {
+
+  return HTTPClient.post(BASE_URL+"/appointment", appoiment);
+};
