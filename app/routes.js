@@ -35,7 +35,7 @@ router.post('/solicitudes/request_student', RequestStudentController.registerReq
 
 /* Psicology Routes */
 router.put('/appointment', AppointmenController.modifyAppointmen);
-
+/*Cerrar convocatoria */
 router.put('/Convocatorias/cerrar/:id(\\d+)' , AnnouncementController.editStatus);
 
 
