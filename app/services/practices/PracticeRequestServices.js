@@ -1,5 +1,5 @@
 const PracticeRequestServices = module.exports;
 const PracticeRequestMSResource = require('../../resources/PracticeRequestMSResource');
 
-PracticeRequestServices.modifyRequestStatus = practice =>
-  PracticeRequestMSResource.modifyRequestStatus(practice);
+PracticeRequestServices.editStatus = request =>
+  PracticeRequestMSResource.editStatus(request);
