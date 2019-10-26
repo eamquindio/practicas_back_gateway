@@ -24,15 +24,19 @@ router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomol
 
 /* Practice Request Routes */
 router.post('/solicitudes/request_company', PracticeRequestController.registerEnterpriseRequest);
+router.put('/solicitud/:id(\\d+)', PracticeRequestController.editStatus);
 
 router.post('/evaluation/register', EvaluationController.registerEvaluation);
 
-router.get('/Convocatorias/list' , ConvocatoryController.listAnnouncement);
+router.get('/Convocatorias/list', ConvocatoryController.listAnnouncement);
 
 /* Request Routes */
 router.post('/solicitudes/request_student', RequestStudentController.registerRequestStudent);
 
 /* Psicology Routes */
 router.put('/appointment', AppointmenController.modifyAppointmen);
+
+router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
+router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 
 module.exports = router;
