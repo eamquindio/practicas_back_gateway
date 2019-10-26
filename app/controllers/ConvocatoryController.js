@@ -50,7 +50,4 @@ ConvocatoryController.listAnnouncement = async (req, res, next) => {
   
       return next(error);
     }
-
   };
-
-
