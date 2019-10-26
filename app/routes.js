@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
 
-router.post('/evaluation/regiterController', EvaliationController.registerEvaluation);
+router.post('/evaluation/register', EvaliationController.registerEvaluation);
 
 module.exports = router;
