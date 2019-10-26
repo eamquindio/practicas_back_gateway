@@ -8,4 +8,10 @@ ConvocatoryMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-ConvocatoryMSResource.modifyAnnouncement = announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
+ConvocatoryMSResource.modifyAnnouncement =
+announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
+
+ConvocatoryMSResource.registerAnnouncement = (announcement) => {
+
+  return HTTPClient.post(BASE_URL+"/convocatorias/", announcement);
+};

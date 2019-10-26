@@ -13,3 +13,16 @@ ConvocatoryController.modifyAnnouncement = async (req, res, next) => {
     return next(error);
   }
 };
+
+ConvocatoryController.registerAnnouncement = async (req, res, next) => {
+  const { body } = req;
+  try {
+    const result = await ConvocatoryService.registerAnnouncement(body);
+
+    return res.send(result);
+  } catch (error) {
+    console.log({ error });
+
+    return next(error);
+  }
+};

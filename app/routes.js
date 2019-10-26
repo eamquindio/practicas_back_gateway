@@ -8,4 +8,7 @@ router.get('/students/practices', PracticesController.getStudentsWithPractice);
 /* Convocatory Routes */
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
 
+router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
+
+
 module.exports = router;
