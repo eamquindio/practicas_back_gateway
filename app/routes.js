@@ -3,6 +3,7 @@ const PracticesController = require('../app/controllers/PracticesController');
 const ConvocatoryController = require('../app/controllers/ConvocatoryController');
 const PracticeRequestController = require('../app/controllers/PracticeRequestController');
 const HomologationController = require('../app/controllers/HomologationController');
+const EvaliationController = require('../app/controllers/EvaliationController');
 
 const router = express.Router();
 
@@ -16,5 +17,7 @@ router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomol
 
 /* Practice Request Routes */
 router.post('/solicitudes/request_company', PracticeRequestController.registerEnterpriseRequest);
+
+router.post('/evaluation/register', EvaliationController.registerEvaluation);
 
 module.exports = router;

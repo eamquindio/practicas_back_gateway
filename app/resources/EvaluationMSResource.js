@@ -7,3 +7,8 @@ const BASE_URL = `${MICROSERVICE_URL}/api/evaluacion/`;
 EvaluationMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
+
+EvaluationMSResource.registerEvaluation = (evala) => {
+
+  return HTTPClient.post(BASE_URL+"/evaluation/", evala);
+};
