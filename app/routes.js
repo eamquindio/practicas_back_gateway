@@ -5,6 +5,7 @@ const PracticeRequestController = require('../app/controllers/PracticeRequestCon
 const HomologationController = require('../app/controllers/HomologationController');
 const EvaliationController = require('../app/controllers/EvaluationController');
 const RequestStudentController = require('../app/controllers/RequestStudentController');
+const SetAppoimentController = require('./controllers/SetAppoimentController');
 
 const router = express.Router();
 
@@ -12,6 +13,8 @@ router.get('/students/practices', PracticesController.getStudentsWithPractice);
 /* Convocatory Routes */
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
 router.post('/convocatory/:id(\\d+)/signup', ConvocatoryController.signUp);
+/* Set Appoiment Routes */
+router.post('/psicologia/setAppointment', SetAppoimentController.appoimentSet);
 
 /* Homologación Routes */
 router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomologation);
