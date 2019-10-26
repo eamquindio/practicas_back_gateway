@@ -22,4 +22,7 @@ router.post('/evaluation/register', EvaliationController.registerEvaluation);
 
 router.get('/Convocatorias/list' , ConvocatoryController.listAnnouncement);
 
+router.put('/Convocatorias/cerrar/:id(\\d+)' , AnnouncementController.editStatus);
+
+
 module.exports = router;

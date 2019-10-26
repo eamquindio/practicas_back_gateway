@@ -15,3 +15,4 @@ ConvocatoryMSResource.singUp = (signUpAnnoucement) => {
 };
 ConvocatoryMSResource.listAnnouncement = listannouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `, listannouncement);
 
+ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `,ClosingAnnouncement);
