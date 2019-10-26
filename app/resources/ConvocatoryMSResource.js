@@ -11,7 +11,6 @@ ConvocatoryMSResource.init = () => {
 ConvocatoryMSResource.modifyAnnouncement =
 announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
 
-
 ConvocatoryMSResource.listAnnouncement =
 listannouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `, listannouncement);
 

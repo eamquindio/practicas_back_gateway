@@ -46,4 +46,7 @@ router.post('/practices/start_practices',PracticesController.registerPractices)
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 
 
+router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
+
+
 module.exports = router;
