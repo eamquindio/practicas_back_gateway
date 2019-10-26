@@ -9,6 +9,7 @@ ConvocatoryServices.signUp = (studentAnnoucement) => {
     console.log(studentToValidate);
     if (!studentToValidate) throw ErrorHandler.BaseError('student not exists', 409);
 
-    return ConvocatoryMSResource.singUp(studentAnnoucement);
+    return ConvocatoryMSResource.signUp(studentAnnoucement);
 };
+
 ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
