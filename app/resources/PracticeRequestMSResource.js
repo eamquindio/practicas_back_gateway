@@ -7,3 +7,9 @@ const BASE_URL = `${MICROSERVICE_URL}/api/solicitudes/`;
 PracticeRequestMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
+
+PracticeRequestMSResource.registerEnterpriseRequest = (request) => {
+  const url = `${BASE_URL}/request_company}`;
+
+  return HTTPClient.post(url, request);
+};

@@ -20,3 +20,9 @@ PracticesServices.getPracticesWithStudentInfo = async () => {
     };
   });
 };
+
+PracticesServices.getTypePractice = async () => {
+  const types = PracticesMSResource.getTypePractices();
+
+  return types;
+};
