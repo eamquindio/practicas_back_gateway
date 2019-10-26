@@ -13,7 +13,7 @@ router.get('/students/practices', PracticesController.getStudentsWithPractice);
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
 router.post('/convocatory/:id(\\d+)/signup', ConvocatoryController.signUp);
 /* Set Appoiment Routes */
-router.post('/psicologia/setAppointment', SetAppoimentController.appoimentSet);
+router.post('/psicologia/appointment', SetAppoimentController.appoimentSet);
 
 /* Homologación Routes */
 router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomologation);
