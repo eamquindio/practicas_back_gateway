@@ -30,3 +30,6 @@ signUpAnnoucement => HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, si
 
 ConvocatoryMSResource.modifyAnnouncement =
 announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
+
+ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `,ClosingAnnouncement);
+

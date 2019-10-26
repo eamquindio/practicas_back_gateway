@@ -35,4 +35,7 @@ router.post('/solicitudes/request_student', RequestStudentController.registerReq
 /* Psicology Routes */
 router.put('/appointment', AppointmenController.modifyAppointmen);
 
+router.put('/Convocatorias/cerrar/:id(\\d+)' , AnnouncementController.editStatus);
+
+
 module.exports = router;
