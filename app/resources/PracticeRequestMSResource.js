@@ -13,3 +13,9 @@ PracticeRequestMSResource.registerEnterpriseRequest = (request) => {
 
   return HTTPClient.post(url, request);
 };
+
+PracticeRequestMSResource.registerRequestStudent = (requestStudent) => {
+  const url = `${BASE_URL}/request_student`;
+
+  return HTTPClient.post(url, requestStudent);
+};
