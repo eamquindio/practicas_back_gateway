@@ -3,7 +3,8 @@ const PracticesController = require('../app/controllers/PracticesController');
 const ConvocatoryController = require('../app/controllers/ConvocatoryController');
 const PracticeRequestController = require('../app/controllers/PracticeRequestController');
 const HomologationController = require('../app/controllers/HomologationController');
-const EvaliationController = require('../app/controllers/EvaliationController');
+const EvaliationController = require('../app/controllers/EvaluationController');
+const RequestStudentController = require('../app/controllers/RequestStudentController');
 
 const router = express.Router();
 
@@ -21,5 +22,8 @@ router.post('/solicitudes/request_company', PracticeRequestController.registerEn
 router.post('/evaluation/register', EvaliationController.registerEvaluation);
 
 router.get('/Convocatorias/list' , ConvocatoryController.listAnnouncement);
+
+/* Request Routes */
+router.post('/solicitudes/request_student', RequestStudentController.registerRequestStudent);
 
 module.exports = router;
