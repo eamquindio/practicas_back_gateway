@@ -7,5 +7,6 @@ const router = express.Router();
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
 /* Convocatory Routes */
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
+router.post('/convocatory/:id(\\d+)/signup', ConvocatoryController.signUp);
 
 module.exports = router;
