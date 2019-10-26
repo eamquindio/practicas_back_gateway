@@ -5,8 +5,10 @@ const PracticeRequestController = require('../app/controllers/PracticeRequestCon
 const HomologationController = require('../app/controllers/HomologationController');
 const EvaluationController = require('../app/controllers/EvaluationController');
 const RequestStudentController = require('../app/controllers/RequestStudentController');
-const EvaluationController = require('../app/controllers/EvaluationController');
+
 const SetAppoimentController = require('./controllers/SetAppoimentController');
+
+const AppointmenController = require('../app/controllers/AppointmenController');
 
 const router = express.Router();
 
@@ -29,5 +31,8 @@ router.get('/Convocatorias/list' , ConvocatoryController.listAnnouncement);
 
 /* Request Routes */
 router.post('/solicitudes/request_student', RequestStudentController.registerRequestStudent);
+
+/* Psicology Routes */
+router.put('/appointment', AppointmenController.modifyAppointmen);
 
 module.exports = router;

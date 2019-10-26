@@ -10,5 +10,5 @@ EvaluationMSResource.init = () => {
 
 EvaluationMSResource.registerEvaluation = (evala) => {
 
-  return HTTPClient.post(BASE_URL+"/evaluation/", evala);
+  return HTTPClient.post(`${BASE_URL}/evaluation/`, evala);
 };
