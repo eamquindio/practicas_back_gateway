@@ -33,3 +33,5 @@ ConvocatoryMSResource.registerAnnouncement = (announcement) => {
 
   return HTTPClient.post(BASE_URL+"/convocatorias/", announcement);
 };
+
+ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `,ClosingAnnouncement);

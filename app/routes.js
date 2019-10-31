@@ -30,11 +30,15 @@ router.post('/evaluation/register', EvaluationController.registerEvaluation);
 
 router.get('/Convocatorias/list', ConvocatoryController.listAnnouncement);
 
+
 /* Request Routes */
 router.post('/solicitudes/request_student', RequestStudentController.registerRequestStudent);
 
 /* Psicology Routes */
 router.put('/appointment', AppointmenController.modifyAppointmen);
+/*Cerrar convocatoria */
+router.put('/Convocatorias/cerrar/:id(\\d+)' , AnnouncementController.editStatus);
+
 
 
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);

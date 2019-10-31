@@ -15,8 +15,7 @@ ConvocatoryServices.signUp = (studentAnnoucement) => {
 
 ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
 
-ConvocatoryServices.modifyAnnouncement =
-annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
+
 
 ConvocatoryServices.modifyAnnouncement =
 annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
@@ -25,3 +24,4 @@ ConvocatoryServices.registerAnnouncement = (annoucement) => {
 
     return ConvocatoryMSResource.registerAnnouncement(annoucement);
 };
+ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement => ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
