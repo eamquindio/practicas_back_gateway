@@ -38,3 +38,16 @@ ConvocatoryController.listAnnouncement = async (req, res, next) => {
     return next(error);
   }
 };
+
+  ConvocatoryController.ClosingAnnouncement = async (req, res, next) => {
+    const { body } = req;
+    try {
+      const result = await ConvocatoryService.ClosingAnnouncement(body);
+  
+      return res.send(result);
+    } catch (error) {
+      console.log({ error });
+  
+      return next(error);
+    }
+  };
