@@ -20,7 +20,8 @@ ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.
 ConvocatoryServices.modifyAnnouncement =
 annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
-ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement => ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
+ConvocatoryServices.registerAnnouncement = (annoucement) => {
 
+    return ConvocatoryMSResource.registerAnnouncement(annoucement);
+};
 ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement => ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
-

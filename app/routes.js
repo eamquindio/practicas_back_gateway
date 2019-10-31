@@ -47,4 +47,10 @@ router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 router.post('/practices/start_practices',PracticesController.registerPractices)
 
 
+router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
+
+
+router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
+
+
 module.exports = router;
