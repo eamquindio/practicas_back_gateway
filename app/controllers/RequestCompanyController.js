@@ -7,8 +7,7 @@ RequestCompanyController.registerCompanyRequest = async (req, res, next) => {
     const result = await RequestCompanyService.registerCompanyRequest(body);
 
     return res.send(result);
-
-  }catch (error) {
+  } catch (error) {
     console.log({ error });
 
     return next(error);
