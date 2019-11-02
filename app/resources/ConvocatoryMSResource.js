@@ -15,9 +15,7 @@ ConvocatoryMSResource.listAnnouncement =
 listannouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `, listannouncement);
 
 ConvocatoryMSResource.signUp =
-(signUpAnnoucement) => {
-  return HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, signUpAnnoucement);
-};
+signUpAnnoucement => HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, signUpAnnoucement);
 
 ConvocatoryMSResource.singUp =
 signUpAnnoucement => HTTPClient.post(`${BASE_URL}"/convocatorias/inscibirse/"`, signUpAnnoucement);
@@ -29,9 +27,8 @@ signUpAnnoucement => HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, si
 
 ConvocatoryMSResource.modifyAnnouncement =
 announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
-ConvocatoryMSResource.registerAnnouncement = (announcement) => {
+ConvocatoryMSResource.registerAnnouncement = announcement =>
+  HTTPClient.post(`${BASE_URL}/convocatorias/`, announcement);
 
-  return HTTPClient.post(BASE_URL+"/convocatorias/", announcement);
-};
-
-ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `,ClosingAnnouncement);
+ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement =>
+  HTTPClient.get(`${BASE_URL} /convocatorias/ `, ClosingAnnouncement);

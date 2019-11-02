@@ -1,7 +1,7 @@
 const HomologationController = module.exports;
 const HomologationServices = require('../services/request/HomologationServices');
 
-HomologationController.signUpHomologation = async(req, res, next) => {
+HomologationController.signUpHomologation = async (req, res, next) => {
   const { body, params: { id } } = req;
 
   try {

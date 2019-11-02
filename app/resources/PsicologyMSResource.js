@@ -8,9 +8,6 @@ PsicologyMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-PsicologyMSResource.appoimentSet = (appoiment) => {
-
-  return HTTPClient.post(`${BASE_URL}/appointment`, appoiment);
-};
+PsicologyMSResource.appoimentSet = appoiment => HTTPClient.post(`${BASE_URL}/appointment`, appoiment);
 
 PsicologyMSResource.modifyAppointment = appointment => HTTPClient.put(`${BASE_URL} /appointment `, appointment);

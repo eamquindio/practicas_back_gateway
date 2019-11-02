@@ -1,7 +1,7 @@
-const SetAppoiment = module.exports;
-const SetAppoimentService = require('../services/psicologa/SetAppoimentService');
+const SetAppoimentController = module.exports;
+const SetAppoimentService = require('../services/psicology/SetAppoimentService');
 
-SetAppoimentService.appoimentSet = async (req, res, next) => {
+SetAppoimentController.appoimentSet = async (req, res, next) => {
   const { body } = req;
   try {
     const result = await SetAppoimentService.appoimentSet(body);

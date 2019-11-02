@@ -19,6 +19,8 @@ ConvocatoryController.signUp = async (req, res, next) => {
   try {
     body.id_convocatoria = id;
     const result = await ConvocatoryService.signUp(body);
+
+    return res.send(result);
   } catch (error) {
     console.log({ error });
 
@@ -30,13 +32,14 @@ ConvocatoryController.listAnnouncement = async (req, res, next) => {
   const { body } = req;
   try {
     const result = await ConvocatoryService.listAnnouncement(body);
+
     return res.send(result);
   } catch (error) {
     console.log({ error });
 
     return next(error);
   }
-}; 
+};
 
 ConvocatoryController.registerAnnouncement = async (req, res, next) => {
   const { body } = req;
@@ -51,15 +54,15 @@ ConvocatoryController.registerAnnouncement = async (req, res, next) => {
   }
 };
 
-  ConvocatoryController.ClosingAnnouncement = async (req, res, next) => {
-    const { body } = req;
-    try {
-      const result = await ConvocatoryService.ClosingAnnouncement(body);
-  
-      return res.send(result);
-    } catch (error) {
-      console.log({ error });
-  
-      return next(error);
-    }
-  };
+ConvocatoryController.ClosingAnnouncement = async (req, res, next) => {
+  const { body } = req;
+  try {
+    const result = await ConvocatoryService.ClosingAnnouncement(body);
+
+    return res.send(result);
+  } catch (error) {
+    console.log({ error });
+
+    return next(error);
+  }
+};

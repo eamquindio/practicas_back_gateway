@@ -8,7 +8,4 @@ EvaluationMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-EvaluationMSResource.registerEvaluation = (evala) => {
-
-  return HTTPClient.post(`${BASE_URL}/evaluation/`, evala);
-};
+EvaluationMSResource.registerEvaluation = evala => HTTPClient.post(`${BASE_URL}/evaluation/`, evala);

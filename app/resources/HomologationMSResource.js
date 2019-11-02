@@ -1,13 +1,12 @@
 const HomologationMSResource = module.exports;
 const HTTPClient = require('../utils/HTTPClient');
+const { MICROSERVICE_URL } = require('../configs/microservices');
 
-// eslint-disable-next-line no-template-curly-in-string
-const BASE_URL = '${MICROSERVICE_URL}/api/solicitudes/';
+const BASE_URL = `${MICROSERVICE_URL}/api/solicitudes/`;
 
 HomologationMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-HomologationMSResource.signUpHomologation = (signUpAnnoucement) => {
-  return HTTPClient.post(`${BASE_URL}/homologation`, signUpAnnoucement);
-};
+HomologationMSResource.signUpHomologation = signUpAnnoucement =>
+  HTTPClient.post(`${BASE_URL}/homologation`, signUpAnnoucement);

@@ -36,15 +36,14 @@ router.post('/solicitudes/request_student', RequestStudentController.registerReq
 
 /* Psicology Routes */
 router.put('/appointment', AppointmenController.modifyAppointmen);
-/*Cerrar convocatoria */
-router.put('/Convocatorias/cerrar/:id(\\d+)' , AnnouncementController.editStatus);
-
+/* Cerrar convocatoria */
+// router.put('/Convocatorias/cerrar/:id(\\d+)', AnnouncementController.editStatus);
 
 
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
 router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 
-router.post('/practices/start_practices',PracticesController.registerPractices)
+router.post('/practices/start_practices', PracticesController.registerPractices);
 
 
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);

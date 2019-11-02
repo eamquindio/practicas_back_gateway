@@ -17,6 +17,7 @@ PracticesController.getStudentsWithPractice = async (req, res, next) => {
 PracticesController.getTypePractice = async (req, res, next) => {
   try {
     const result = await PracticesServices.getTypePractice();
+
     return res.send(result);
   } catch (error) {
     console.log({ error });
@@ -24,7 +25,6 @@ PracticesController.getTypePractice = async (req, res, next) => {
     return next(error);
   }
 };
-
 
 
 PracticesController.registerPractices = async (req, res, next) => {
@@ -38,5 +38,4 @@ PracticesController.registerPractices = async (req, res, next) => {
 
     return next(error);
   }
-
 };

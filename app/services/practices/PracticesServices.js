@@ -22,10 +22,7 @@ PracticesServices.getPracticesWithStudentInfo = async () => {
 };
 
 
-PracticesServices.Registerpractices = (Practices) => {
-
-  return PracticesMSResource.singUp(Practices);
-};
+PracticesServices.Registerpractices = Practices => PracticesMSResource.singUp(Practices);
 
 PracticesServices.getTypePractice = async () => {
   const types = PracticesMSResource.getTypePractices();
