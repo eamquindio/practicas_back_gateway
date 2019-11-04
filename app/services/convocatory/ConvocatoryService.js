@@ -26,7 +26,6 @@ ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement =>
   ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
 
 ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
-
   const annoucement = await ConvocatoryMSResource.get(idAnnoucement);
   console.log(annoucement);
   if (!annoucement) throw ErrorHandler.BaseError('convocatory not exists', 409);
