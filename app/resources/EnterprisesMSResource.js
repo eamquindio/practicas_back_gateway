@@ -8,4 +8,4 @@ EnterprisesMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-EnterprisesMSResource.get = nit => HTTPClient.get(`${BASE_URL}/company/find_by_nit`,{ NIT: nit} );
+EnterprisesMSResource.get = nit => HTTPClient.get(`${BASE_URL}/company/find_by_nit`, { NIT: nit });

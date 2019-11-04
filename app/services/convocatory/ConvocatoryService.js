@@ -25,7 +25,7 @@ ConvocatoryServices.registerAnnouncement = annoucement => ConvocatoryMSResource.
 ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement =>
   ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
 
-ConvocatoryServices.buildViewConvocatoryDetail = async idAnnoucement => {
+ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
 
   const annoucement = await ConvocatoryMSResource.get(idAnnoucement);
   console.log(annoucement);
@@ -52,4 +52,4 @@ ConvocatoryServices.buildViewConvocatoryDetail = async idAnnoucement => {
   // falta parte de ciclo
 
   return annoucement;
-}
+};
