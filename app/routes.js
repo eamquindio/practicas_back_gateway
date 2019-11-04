@@ -15,7 +15,8 @@ const router = express.Router();
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
 /* Convocatory Routes */
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
-router.post('/convocatory/:id(\\d+)/signup', ConvocatoryController.signUp);
+router.get('/convocatorias/:id(\\d+)', ConvocatoryController.buildViewConvocatoryDetail);
+router.post('/convocatorias/:id(\\d+)/signup', ConvocatoryController.signUp);
 /* Set Appoiment Routes */
 router.post('/psicologia/appointment', SetAppoimentController.appoimentSet);
 

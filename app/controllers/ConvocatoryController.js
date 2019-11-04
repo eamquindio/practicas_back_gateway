@@ -66,3 +66,16 @@ ConvocatoryController.ClosingAnnouncement = async (req, res, next) => {
     return next(error);
   }
 };
+
+ConvocatoryController.buildViewConvocatoryDetail = async (req, res, next) => {
+  const { params: { id } } = req;
+  try {
+    const result = await ConvocatoryService.buildViewConvocatoryDetail(id);
+
+    return res.send(result);
+  } catch (error) {
+    console.log({ error });
+
+    return next(error);
+  }
+};

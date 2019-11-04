@@ -33,16 +33,8 @@ spec:
       - name: ${SERVICE_NAME}
         image: gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
         env:
-        - name: DB_HOST
-          value: ${DB_HOST_VAR}
-        - name: DB_PORT
-          value: "5432"
-        - name: DB_NAME
-          value: ${SERVICE_NAME}
-        - name: DB_USER
-          value: "postgres"    
-        - name: DB_PASS
-          value: ${DB_PASS_VAR}      
+        - name: MICROSERVICE_URL
+          value: practicaseam
         ports:
         - name: http
           containerPort: 3000
