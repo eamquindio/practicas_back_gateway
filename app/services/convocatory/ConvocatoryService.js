@@ -35,7 +35,7 @@ ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
   console.log(enterpriseToValidate);
   if (!enterpriseToValidate) throw ErrorHandler.BaseError('enterprise not exists', 409);
 
-  annoucement.id_empresa = enterpriseToValidate[0];
+  [annoucement.id_empresa] = enterpriseToValidate;
 
   const facultyToValidate = await UniversityMSResource.getFaculty(annoucement.id_facultad);
   console.log(facultyToValidate);
