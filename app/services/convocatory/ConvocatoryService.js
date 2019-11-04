@@ -26,6 +26,7 @@ ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement =>
   ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
 
 ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
+  console.log(idAnnoucement);
   const annoucement = await ConvocatoryMSResource.get(idAnnoucement);
   console.log(annoucement);
   if (!annoucement) throw ErrorHandler.BaseError('convocatory not exists', 409);
@@ -34,7 +35,7 @@ ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
   console.log(enterpriseToValidate);
   if (!enterpriseToValidate) throw ErrorHandler.BaseError('enterprise not exists', 409);
 
-  annoucement.id_empresa = enterpriseToValidate;
+  annoucement.id_empresa = enterpriseToValidate[0];
 
   const facultyToValidate = await UniversityMSResource.getFaculty(annoucement.id_facultad);
   console.log(facultyToValidate);
@@ -47,8 +48,6 @@ ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
   if (!programToValidate) throw ErrorHandler.BaseError('program not exists', 409);
 
   annoucement.id_programa = programToValidate;
-
-  // falta parte de ciclo
 
   return annoucement;
 };
