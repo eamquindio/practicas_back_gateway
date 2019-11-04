@@ -21,10 +21,11 @@ ConvocatoryServices.modifyAnnouncement =
   annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
 ConvocatoryServices.registerAnnouncement = annoucement => ConvocatoryMSResource.registerAnnouncement(annoucement);
+
 ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement =>
   ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
 
-ConvocatoryServices.buildViewConvocatoryDetail = (idAnnoucement) => {
+ConvocatoryServices.buildViewConvocatoryDetail = async idAnnoucement => {
 
   const annoucement = await ConvocatoryMSResource.get(idAnnoucement);
   console.log(annoucement);

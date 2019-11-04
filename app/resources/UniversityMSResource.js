@@ -14,6 +14,6 @@ UniversityMSResource.getPrograms = () => {
   return HTTPClient.get(url);
 };
 
-UniversityMSResource.getProgram = (id) => HTTPClient.get(`${BASE_URL}/programs/${id}`);
+UniversityMSResource.getProgram = id => HTTPClient.get(`${BASE_URL}/programs/${id}`);
 
-UniversityMSResource.getFaculty = (id) => HTTPClient.get(`${BASE_URL}/faculty/${id}`);
+UniversityMSResource.getFaculty = id => HTTPClient.get(`${BASE_URL}/faculty/${id}`);
