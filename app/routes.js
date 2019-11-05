@@ -18,7 +18,7 @@ router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement)
 router.get('/convocatorias/:id(\\d+)', ConvocatoryController.buildViewConvocatoryDetail);
 router.post('/convocatorias/:id(\\d+)/signup', ConvocatoryController.signUp);
 /* Set Appoiment Routes */
-router.post('/psicologia/appointment', SetAppoimentController.appoimentSet);
+router.post('/psicologia/appointment/', SetAppoimentController.appoimentSet);
 
 /* Homologación Routes */
 router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomologation);
@@ -27,7 +27,7 @@ router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomol
 router.post('/solicitudes/request_company', PracticeRequestController.registerEnterpriseRequest);
 router.put('/solicitud/:id(\\d+)', PracticeRequestController.editStatus);
 
-router.post('/evaluation/register', EvaluationController.registerEvaluation);
+router.post('/evaluation', EvaluationController.registerEvaluation);
 
 router.get('/Convocatorias/list', ConvocatoryController.listAnnouncement);
 
