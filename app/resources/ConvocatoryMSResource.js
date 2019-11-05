@@ -8,27 +8,20 @@ ConvocatoryMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-ConvocatoryMSResource.modifyAnnouncement =
-announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
+ConvocatoryMSResource.modifyAnnouncement = announcement =>
+  HTTPClient.put(`${BASE_URL}/convocatorias/`, announcement);
 
-ConvocatoryMSResource.listAnnouncement =
-listannouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `, listannouncement);
+ConvocatoryMSResource.listAnnouncement = listannouncement =>
+  HTTPClient.get(`${BASE_URL}/convocatorias/`, listannouncement);
 
-ConvocatoryMSResource.signUp =
-signUpAnnoucement => HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, signUpAnnoucement);
+ConvocatoryMSResource.signUp = signUpAnnoucement =>
+  HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, signUpAnnoucement);
 
-ConvocatoryMSResource.singUp =
-signUpAnnoucement => HTTPClient.post(`${BASE_URL}"/convocatorias/inscibirse/"`, signUpAnnoucement);
-ConvocatoryMSResource.listAnnouncement =
-listannouncement => HTTPClient.get(`${BASE_URL} /convocatorias/ `, listannouncement);
-
-ConvocatoryMSResource.singUp =
-signUpAnnoucement => HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, signUpAnnoucement);
-
-ConvocatoryMSResource.modifyAnnouncement =
-announcement => HTTPClient.put(`${BASE_URL} /convocatorias/ `, announcement);
 ConvocatoryMSResource.registerAnnouncement = announcement =>
   HTTPClient.post(`${BASE_URL}/convocatorias/`, announcement);
 
 ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement =>
-  HTTPClient.get(`${BASE_URL} /convocatorias/ `, ClosingAnnouncement);
+  HTTPClient.get(`${BASE_URL}/convocatorias/`, ClosingAnnouncement);
+
+ConvocatoryMSResource.get = id =>
+  HTTPClient.get(`${BASE_URL}/convocatorias/${id}`);

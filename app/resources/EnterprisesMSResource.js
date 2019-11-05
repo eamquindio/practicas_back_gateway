@@ -7,3 +7,5 @@ const BASE_URL = `${MICROSERVICE_URL}/api/empresas/`;
 EnterprisesMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
+
+EnterprisesMSResource.get = nit => HTTPClient.get(`${BASE_URL}/company/find_by_nit`, { NIT: nit });
