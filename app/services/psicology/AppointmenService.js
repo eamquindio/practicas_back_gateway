@@ -19,6 +19,6 @@ appointmen => PsicologyMSResource.modifyAppointmen(appointmen);
 
 AppointmenServices.getAppointment = async () => {
   const appointmen = PsicologyMSResource.getAppointment();
-  
+
   return appointmen;
 };
