@@ -19,6 +19,10 @@ AppointmenController.appoimentSet = async (req, res, next) => {
   try {
     const result = await AppointmenService.appoimentSet(body);
 
+AppointmenController.getAppointment = async (req, res, next) => {
+  try {
+    const result = await AppointmenService.getAppointment();
+
     return res.send(result);
   } catch (error) {
     console.log({ error });
