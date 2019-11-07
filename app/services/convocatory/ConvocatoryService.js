@@ -12,6 +12,7 @@ ConvocatoryServices.signUp = async (studentAnnoucement) => {
    console.log(studentToValidate);
    if (!studentToValidate) throw ErrorHandler.BaseError('student not exists', 409);
  */
+
   return ConvocatoryMSResource.signUp(studentAnnoucement);
 };
 
