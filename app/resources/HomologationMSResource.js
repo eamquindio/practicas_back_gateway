@@ -8,5 +8,5 @@ HomologationMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-HomologationMSResource.signUpHomologation = signUpAnnoucement =>
-  HTTPClient.post(`${BASE_URL}/homologation`, signUpAnnoucement);
+HomologationMSResource.register = registerHomologation =>
+  HTTPClient.post(`${BASE_URL}/homologacion`, registerHomologation);
