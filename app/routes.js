@@ -5,9 +5,6 @@ const PracticeRequestController = require('../app/controllers/PracticeRequestCon
 const HomologationController = require('../app/controllers/HomologationController');
 const EvaluationController = require('../app/controllers/EvaluationController');
 const RequestStudentController = require('../app/controllers/RequestStudentController');
-
-const SetAppoimentController = require('./controllers/SetAppoimentController');
-
 const AppointmenController = require('../app/controllers/AppointmenController');
 
 const router = express.Router();
@@ -18,7 +15,7 @@ router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement)
 router.get('/convocatorias/:id(\\d+)', ConvocatoryController.buildViewConvocatoryDetail);
 router.post('/convocatorias/:id(\\d+)/signup', ConvocatoryController.signUp);
 /* Set Appoiment Routes */
-router.post('/psicologia/appointment/', SetAppoimentController.appoimentSet);
+router.post('/psicologia/appointment/', AppointmenController.appoimentSet);
 
 /* Homologación Routes */
 router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomologation);
@@ -43,14 +40,8 @@ router.put('/appointment', AppointmenController.modifyAppointmen);
 
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
 router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
-
 router.post('/practices/start_practices', PracticesController.registerPractices);
-
-
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
-
-
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
-
 
 module.exports = router;
