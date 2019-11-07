@@ -18,7 +18,7 @@ router.post('/convocatorias/:id(\\d+)/signup', ConvocatoryController.signUp);
 router.post('/psicologia/appointment/', AppointmenController.appoimentSet);
 
 /* Homologación Routes */
-router.post('/homologation/:id(\\d+)/signup', HomologationController.signUpHomologation);
+router.post('/homologation', HomologationController.register);
 
 /* Practice Request Routes */
 router.post('/solicitudes/request_company', PracticeRequestController.registerEnterpriseRequest);

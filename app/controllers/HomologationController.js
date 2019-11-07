@@ -1,12 +1,10 @@
 const HomologationController = module.exports;
-const HomologationServices = require('../services/request/HomologationServices');
+const HomologationService = require('../services/request/HomologationService');
 
-HomologationController.signUpHomologation = async (req, res, next) => {
-  const { body, params: { id } } = req;
-
+HomologationController.register = async (req, res, next) => {
+  const { body } = req;
   try {
-    body.id_homologacion = id;
-    const result = await HomologationServices.signUpHomologation(body);
+    const result = await HomologationService.register(body);
 
     return res.send(result);
   } catch (error) {
