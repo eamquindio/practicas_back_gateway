@@ -1,6 +1,5 @@
 const AppointmenController = module.exports;
 const AppointmenService = require('../services/psicology/AppointmenService');
-const SetAppoimentService = require('../services/psicology/SetAppoimentService');
 
 AppointmenController.modifyAppointmen = async (req, res, next) => {
   const { body } = req;
@@ -15,10 +14,10 @@ AppointmenController.modifyAppointmen = async (req, res, next) => {
   }
 };
 
-SetAppoimentController.appoimentSet = async (req, res, next) => {
+AppointmenControlle.appoimentSet = async (req, res, next) => {
   const { body } = req;
   try {
-    const result = await SetAppoimentService.appoimentSet(body);
+    const result = await AppointmenService.appoimentSet(body);
 
     return res.send(result);
   } catch (error) {
@@ -26,4 +25,4 @@ SetAppoimentController.appoimentSet = async (req, res, next) => {
 
     return next(error);
   }
-};
+}; 

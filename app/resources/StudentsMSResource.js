@@ -11,5 +11,3 @@ StudentsMSResources.getStudentsByIdList = (studentIdList) => {
 };
 
 StudentsMSResources.get = id => HTTPClient.get(`${BASE_URL}/students/${id}`);
-
-
