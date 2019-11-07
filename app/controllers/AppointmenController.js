@@ -25,4 +25,4 @@ AppointmenController.appoimentSet = async (req, res, next) => {
 
     return next(error);
   }
-}; 
+};
