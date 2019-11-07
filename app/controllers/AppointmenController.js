@@ -14,7 +14,7 @@ AppointmenController.modifyAppointmen = async (req, res, next) => {
   }
 };
 
-AppointmenControlle.appoimentSet = async (req, res, next) => {
+AppointmenController.appoimentSet = async (req, res, next) => {
   const { body } = req;
   try {
     const result = await AppointmenService.appoimentSet(body);
