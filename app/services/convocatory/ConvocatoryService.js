@@ -1,4 +1,4 @@
-cconst ConvocatoryServices = module.exports;
+const ConvocatoryServices = module.exports;
 const ConvocatoryMSResource = require('../../resources/ConvocatoryMSResource');
 // const StudentMSResource = require('../../resources/StudentsMSResource');
 const EnterprisesMSResource = require('../../resources/EnterprisesMSResource');
