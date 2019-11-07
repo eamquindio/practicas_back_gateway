@@ -15,7 +15,7 @@ ConvocatoryMSResource.listAnnouncement = listannouncement =>
   HTTPClient.get(`${BASE_URL}/Convocatorias/list`, listannouncement);
 
 ConvocatoryMSResource.signUp = signUpAnnoucement =>
-  HTTPClient.post(`${BASE_URL}/convocatorias/inscibirse/`, signUpAnnoucement);
+  HTTPClient.post(`${BASE_URL}/convocatorias`, signUpAnnoucement);
 
 ConvocatoryMSResource.registerAnnouncement = announcement =>
   HTTPClient.post(`${BASE_URL}/convocatorias/`, announcement);
@@ -25,9 +25,3 @@ ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement =>
 
 ConvocatoryMSResource.get = id =>
   HTTPClient.get(`${BASE_URL}/convocatorias/${id}`);
-
-ConvocatoryMSResource.listAll = () => {
-  const url = `${BASE_URL}/convocatorias`;
-
-  return HTTPClient.get(url);
-};

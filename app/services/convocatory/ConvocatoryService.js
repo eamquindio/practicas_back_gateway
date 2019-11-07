@@ -1,6 +1,6 @@
-const ConvocatoryServices = module.exports;
+cconst ConvocatoryServices = module.exports;
 const ConvocatoryMSResource = require('../../resources/ConvocatoryMSResource');
-const StudentMSResource = require('../../resources/StudentsMSResource');
+// const StudentMSResource = require('../../resources/StudentsMSResource');
 const EnterprisesMSResource = require('../../resources/EnterprisesMSResource');
 const UniversityMSResource = require('../../resources/UniversityMSResource');
 const { ErrorHandler } = require('../../utils/ErrorHandlerMiddleware');
@@ -8,10 +8,10 @@ const { ErrorHandler } = require('../../utils/ErrorHandlerMiddleware');
 ConvocatoryServices.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
 ConvocatoryServices.signUp = async (studentAnnoucement) => {
-  const studentToValidate = await StudentMSResource.get(studentAnnoucement.id_estudiante);
-  console.log(studentToValidate);
-  if (!studentToValidate) throw ErrorHandler.BaseError('student not exists', 409);
-
+  /* const studentToValidate = await StudentMSResource.get(studentAnnoucement.numero_estudiantes);
+   console.log(studentToValidate);
+   if (!studentToValidate) throw ErrorHandler.BaseError('student not exists', 409);
+ */
   return ConvocatoryMSResource.signUp(studentAnnoucement);
 };
 
@@ -50,10 +50,4 @@ ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
   annoucement.id_programa = programToValidate;
 
   return annoucement;
-};
-
-ConvocatoryServices.listAll = async () => {
-  const types = ConvocatoryMSResource.listAll();
-
-  return types;
 };
