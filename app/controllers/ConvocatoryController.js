@@ -79,3 +79,15 @@ ConvocatoryController.buildViewConvocatoryDetail = async (req, res, next) => {
     return next(error);
   }
 };
+
+ConvocatoryController.listAll = async (req, res, next) => {
+  try {
+    const result = await ConvocatoryService.listAll();
+
+    return res.send(result);
+  } catch (error) {
+    console.log({ error });
+
+    return next(error);
+  }
+};

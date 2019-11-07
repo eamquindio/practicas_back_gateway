@@ -25,3 +25,9 @@ ConvocatoryMSResource.ClosingAnnouncement = ClosingAnnouncement =>
 
 ConvocatoryMSResource.get = id =>
   HTTPClient.get(`${BASE_URL}/convocatorias/${id}`);
+
+ConvocatoryMSResource.listAll = () => {
+  const url = `${BASE_URL}/convocatorias`;
+
+  return HTTPClient.get(url);
+};

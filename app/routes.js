@@ -27,7 +27,7 @@ router.put('/solicitud/:id(\\d+)', PracticeRequestController.editStatus);
 router.post('/evaluation', EvaluationController.registerEvaluation);
 
 router.get('/Convocatorias/list', ConvocatoryController.listAnnouncement);
-
+router.get('/convocatorias', ConvocatoryController.listAll);
 
 /* Request Routes */
 router.post('/solicitudes/request_student', RequestStudentController.registerRequestStudent);
