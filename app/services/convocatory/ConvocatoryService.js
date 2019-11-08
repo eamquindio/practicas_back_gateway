@@ -45,8 +45,7 @@ ConvocatoryService.buildViewConvocatoryDetail = async (idAnnoucement) => {
   return annoucement;
 };
 
-ConvocatoryServices.listAll = async () => {
-
+ConvocatoryService.listAll = async () => {
   const types = ConvocatoryMSResource.listAll();
 
   return types;
