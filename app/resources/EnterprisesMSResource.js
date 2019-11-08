@@ -9,3 +9,9 @@ EnterprisesMSResource.init = () => {
 };
 
 EnterprisesMSResource.get = nit => HTTPClient.get(`${BASE_URL}/company/find_by_nit`, { NIT: nit });
+
+EnterprisesMSResource.registerEnterprise = (enterprise) => {
+  const url = `${BASE_URL}/enterprise`;
+
+  return HTTPClient.post(url, enterprise);
+};
