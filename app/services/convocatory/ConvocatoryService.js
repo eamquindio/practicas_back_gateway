@@ -1,24 +1,24 @@
-const ConvocatoryServices = module.exports;
+const ConvocatoryService = module.exports;
 const ConvocatoryMSResource = require('../../resources/ConvocatoryMSResource');
 const EnterprisesMSResource = require('../../resources/EnterprisesMSResource');
 const UniversityMSResource = require('../../resources/UniversityMSResource');
 const { ErrorHandler } = require('../../utils/ErrorHandlerMiddleware');
 
-ConvocatoryServices.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
+ConvocatoryService.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
-ConvocatoryServices.signUp = async studentAnnoucement => ConvocatoryMSResource.signUp(studentAnnoucement);
+ConvocatoryService.signUp = async studentAnnoucement => ConvocatoryMSResource.signUp(studentAnnoucement);
 
-ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
+ConvocatoryService.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
 
-ConvocatoryServices.modifyAnnouncement =
+ConvocatoryService.modifyAnnouncement =
   annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
-ConvocatoryServices.registerAnnouncement = annoucement => ConvocatoryMSResource.registerAnnouncement(annoucement);
+ConvocatoryService.registerAnnouncement = annoucement => ConvocatoryMSResource.registerAnnouncement(annoucement);
 
-ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement =>
+ConvocatoryService.ClosingAnnouncement = ClosingAnnouncement =>
   ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
 
-ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
+ConvocatoryService.buildViewConvocatoryDetail = async (idAnnoucement) => {
   console.log(idAnnoucement);
   const annoucement = await ConvocatoryMSResource.get(idAnnoucement);
   console.log(annoucement);
