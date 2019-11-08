@@ -6,9 +6,7 @@ const { ErrorHandler } = require('../../utils/ErrorHandlerMiddleware');
 
 ConvocatoryServices.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
-ConvocatoryServices.signUp = async (studentAnnoucement) => {
-  return ConvocatoryMSResource.signUp(studentAnnoucement);
-};
+ConvocatoryServices.signUp = async studentAnnoucement => ConvocatoryMSResource.signUp(studentAnnoucement);
 
 ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
 
