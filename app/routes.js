@@ -33,7 +33,9 @@ router.get('/convocatorias', ConvocatoryController.listAll);
 router.post('/solicitudes/request_student', RequestStudentController.registerRequestStudent);
 
 /* Psicology Routes */
-router.put('/appointment', AppointmenController.modifyAppointmen);
+router.put('/appointment/', AppointmenController.modifyAppointmen);
+router.get('/appointment/:id(\\d+)', AppointmenController.getAppointment);
+
 /* Cerrar convocatoria */
 // router.put('/Convocatorias/cerrar/:id(\\d+)', AnnouncementController.editStatus);
 
