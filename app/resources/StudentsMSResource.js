@@ -9,3 +9,5 @@ StudentsMSResources.getStudentsByIdList = (studentIdList) => {
 
   return HTTPClient.post(url, { estudiante: studentIdList });
 };
+
+StudentsMSResources.get = (id) => { return HTTPClient.get(`${BASE_URL}/students/`, { id }) }
