@@ -6,6 +6,7 @@ const HomologationController = require('../app/controllers/HomologationControlle
 const EvaluationController = require('../app/controllers/EvaluationController');
 const RequestStudentController = require('../app/controllers/RequestStudentController');
 const AppointmenController = require('../app/controllers/AppointmenController');
+const EnterprisesController = require('../app/controllers/EnterprisesController');
 
 const router = express.Router();
 
@@ -45,5 +46,8 @@ router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 router.post('/practices/start_practices', PracticesController.registerPractices);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
+
+router.post('/empresas/company', EnterprisesController.registerEnterprise);
+router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.getEnterprise);
 
 module.exports = router;
