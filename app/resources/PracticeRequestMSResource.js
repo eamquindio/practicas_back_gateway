@@ -9,7 +9,7 @@ PracticeRequestMSResource.init = () => {
 };
 
 PracticeRequestMSResource.registerEnterpriseRequest = (request) => {
-  const url = `${BASE_URL}/request_company}`;
+  const url = `${BASE_URL}request_company`;
 
   return HTTPClient.post(url, request);
 };
