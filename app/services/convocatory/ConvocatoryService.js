@@ -44,3 +44,6 @@ ConvocatoryService.buildViewConvocatoryDetail = async (idAnnoucement) => {
 
   return annoucement;
 };
+
+ConvocatoryServices.listAll = async () => {
+};
