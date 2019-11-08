@@ -14,8 +14,8 @@ AppointmenServices.appoimentSet = async (appoiment) => {
   return PsicologyMSResource.appoimentSet(appoiment);
 };
 
-AppointmenServices.getAppointment = async () => {
-  const appointmen = PsicologyMSResource.getAppointment();
+AppointmenServices.getAppointment = await (id) => {
+  const appointmen = PsicologyMSResource.getAppointment(id);
 
   return appointmen;
 };

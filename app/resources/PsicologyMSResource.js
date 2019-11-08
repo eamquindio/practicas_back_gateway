@@ -10,5 +10,6 @@ PsicologyMSResource.init = () => {
 
 PsicologyMSResource.appoimentSet = appoiment => HTTPClient.post(`${BASE_URL}/appointment/`, appoiment);
 
-PsicologyMSResource.modifyAppointment = appointment => HTTPClient.put(`${BASE_URL}/appointment/`, appointment);
+PsicologyMSResource.modifyAppointmen = 
+appointment => HTTPClient.put(`${BASE_URL}/appointment/appointment`, appointment);
 PsicologyMSResource.getAppointment = id => HTTPClient.get(`${BASE_URL}/appointment/${id}`);
