@@ -77,8 +77,7 @@ ConvocatoryController.buildViewConvocatoryDetail = async (req, res, next) => {
     console.log({ error });
 
     return next(error);
-
- }
+  }
 };
 
 ConvocatoryController.listAll = async (req, res, next) => {
