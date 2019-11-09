@@ -43,7 +43,7 @@ router.get('/appointment/:id(\\d+)', AppointmenController.getAppointment);
 
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
 router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
-router.post('/practices/start_practices', PracticesController.registerPractices);
+router.post('/practices/start_practices', PracticesController.Registerpractices);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 

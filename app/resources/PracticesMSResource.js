@@ -17,10 +17,9 @@ PracticesMSResource.getTypePractices = () => {
   return HTTPClient.get(url);
 };
 
+  
+PracticesMSResource.postPractices = Practice => {
+  HTTPClient.post (`${BASE_URL}/practica_estudiante`, Practice);
 
-PracticesMSResource.postPractices = () => {
-  const url = `${BASE_URL}/practica_estudiante`;
-
-  return HTTPClient.post(url);
 };
 
