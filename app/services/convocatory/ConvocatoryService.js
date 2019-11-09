@@ -1,31 +1,24 @@
-const ConvocatoryServices = module.exports;
+const ConvocatoryService = module.exports;
 const ConvocatoryMSResource = require('../../resources/ConvocatoryMSResource');
-const StudentMSResource = require('../../resources/StudentsMSResource');
 const EnterprisesMSResource = require('../../resources/EnterprisesMSResource');
 const UniversityMSResource = require('../../resources/UniversityMSResource');
 const { ErrorHandler } = require('../../utils/ErrorHandlerMiddleware');
 
-ConvocatoryServices.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
+ConvocatoryService.modifyAnnouncement = annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
-ConvocatoryServices.signUp = async (studentAnnoucement) => {
-  const studentToValidate = await StudentMSResource.get(studentAnnoucement.id_estudiante);
-  console.log(studentToValidate);
-  if (!studentToValidate) throw ErrorHandler.BaseError('student not exists', 409);
+ConvocatoryService.signUp = async studentAnnoucement => ConvocatoryMSResource.signUp(studentAnnoucement);
 
-  return ConvocatoryMSResource.signUp(studentAnnoucement);
-};
+ConvocatoryService.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
 
-ConvocatoryServices.listAnnouncement = listannoucement => ConvocatoryMSResource.listAnnouncement(listannoucement);
-
-ConvocatoryServices.modifyAnnouncement =
+ConvocatoryService.modifyAnnouncement =
   annoucement => ConvocatoryMSResource.modifyAnnouncement(annoucement);
 
-ConvocatoryServices.registerAnnouncement = annoucement => ConvocatoryMSResource.registerAnnouncement(annoucement);
+ConvocatoryService.registerAnnouncement = annoucement => ConvocatoryMSResource.registerAnnouncement(annoucement);
 
-ConvocatoryServices.ClosingAnnouncement = ClosingAnnouncement =>
+ConvocatoryService.ClosingAnnouncement = ClosingAnnouncement =>
   ConvocatoryMSResource.ClosingAnnouncement(ClosingAnnouncement);
 
-ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
+ConvocatoryService.buildViewConvocatoryDetail = async (idAnnoucement) => {
   console.log(idAnnoucement);
   const annoucement = await ConvocatoryMSResource.get(idAnnoucement);
   console.log(annoucement);
@@ -52,7 +45,7 @@ ConvocatoryServices.buildViewConvocatoryDetail = async (idAnnoucement) => {
   return annoucement;
 };
 
-ConvocatoryServices.listAll = async () => {
+ConvocatoryService.listAll = async () => {
   const types = ConvocatoryMSResource.listAll();
 
   return types;

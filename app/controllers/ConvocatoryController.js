@@ -17,7 +17,7 @@ ConvocatoryController.modifyAnnouncement = async (req, res, next) => {
 ConvocatoryController.signUp = async (req, res, next) => {
   const { body, params: { id } } = req;
   try {
-    body.id_convocatoria = id;
+    body.id = id;
     const result = await ConvocatoryService.signUp(body);
 
     return res.send(result);
