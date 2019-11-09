@@ -8,7 +8,7 @@ EnterprisesMSResource.init = () => {
   console.log({ BASE_URL, HTTPClient });
 };
 
-EnterprisesMSResource.getEnterprise = nit => HTTPClient.get(`${BASE_URL}/company/find_by_nit/${nit}`);
+EnterprisesMSResource.get = nit => HTTPClient.get(`${BASE_URL}/company/find_by_nit/${nit}`);
 
 EnterprisesMSResource.registerEnterprise = (enterprise) => {
   const url = `${BASE_URL}/company`;
