@@ -6,16 +6,12 @@ const HomologationController = require('../app/controllers/HomologationControlle
 const EvaluationController = require('../app/controllers/EvaluationController');
 const RequestStudentController = require('../app/controllers/RequestStudentController');
 const AppointmenController = require('../app/controllers/AppointmenController');
-<<<<<<< HEAD
 const EnterprisesController = require('../app/controllers/EnterprisesController');
 const UniversityController = require('../app/controllers/UniversityController');
 const RequestController = require('../app/controllers/RequestController');
 const StudentController = require('../app/controllers/StudentController');
 
 cerrarconvocatoria
-=======
->>>>>>> cerrarconvocatoria
-
 const router = express.Router();
 
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
@@ -61,6 +57,7 @@ router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 
 module.exports = router;
+
 router.post('/empresas/company', EnterprisesController.registerEnterprise);
 router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.getEnterprise);
 
@@ -68,4 +65,5 @@ router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.get
 router.get('/request', RequestController.getRequest);
 
 module.exports = router;
+
 
