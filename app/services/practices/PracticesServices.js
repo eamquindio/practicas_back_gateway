@@ -20,10 +20,10 @@ PracticesServices.getPracticesWithStudentInfo = async () => {
     };
   });
 };
- 
-PracticesServices.Registerpractices = (Practice) => {
+
+PracticesServices.Registerpractices = (Practice) =>{
   return PracticesMSResource.postPractices(Practice);
-};      
+};     
 
 PracticesServices.getTypePractice = async () => {
   const types = PracticesMSResource.getTypePractices();
