@@ -22,7 +22,8 @@ PracticesServices.getPracticesWithStudentInfo = async () => {
 };
 
 PracticesServices.Registerpractices = (Practice) => {
-    return PracticesMSResource.postPractices(Practice);
+  const pra = PracticesMSResource.postPractices(Practice);
+  return pra;
 };
 
 PracticesServices.getTypePractice = async () => {
