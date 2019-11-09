@@ -9,6 +9,8 @@ const AppointmenController = require('../app/controllers/AppointmenController');
 const EnterprisesController = require('../app/controllers/EnterprisesController');
 const UniversityController = require('../app/controllers/UniversityController');
 
+cerrarconvocatoria
+
 const router = express.Router();
 
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
@@ -16,6 +18,7 @@ router.get('/students/practices', PracticesController.getStudentsWithPractice);
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
 router.get('/convocatorias/:id(\\d+)', ConvocatoryController.buildViewConvocatoryDetail);
 router.post('/convocatorias/:id(\\d+)/signup', ConvocatoryController.signUp);
+router.post('/closingReason', ConvocatoryController.ClosingAnnouncement);
 /* Set Appoiment Routes */
 router.post('/psicologia/appointment/', AppointmenController.appoimentSet);
 
@@ -48,8 +51,5 @@ router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
 router.post('/practices/start_practices', PracticesController.registerPractices);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
-
-router.post('/empresas/company', EnterprisesController.registerEnterprise);
-router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.getEnterprise);
 
 module.exports = router;
