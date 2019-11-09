@@ -4,7 +4,6 @@ const EnterpriseService = require('../services/enterprise/EnterpriseService');
 EnterprisesController.registerEnterprise = async (req, res, next) => {
   const { body } = req;
   try {
-    
     const result = await EnterpriseService.registerEnterprise(body);
 
     return res.send(result);

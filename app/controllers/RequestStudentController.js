@@ -4,7 +4,6 @@ const RequestStudentService = require('../services/request/RequestStudentService
 RequestStudentController.registerRequestStudent = async (req, res, next) => {
   const { body } = req;
   try {
-    
     const result = await RequestStudentService.registerRequestStudent(body);
 
     return res.send(result);
