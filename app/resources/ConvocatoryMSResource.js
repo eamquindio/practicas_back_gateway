@@ -30,3 +30,4 @@ ConvocatoryMSResource.listAll = () => {
   const url = `${BASE_URL}/convocatorias`;
 
   return HTTPClient.get(url);
+}
