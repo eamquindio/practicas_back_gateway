@@ -9,7 +9,7 @@ UniversityMSResource.init = () => {
 };
 
 UniversityMSResource.getPrograms = () => {
-  const url = `${BASE_URL}/programs`;
+  const url = `${BASE_URL}/programs/`;
 
   return HTTPClient.get(url);
 };
