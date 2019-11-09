@@ -7,6 +7,7 @@ const EvaluationController = require('../app/controllers/EvaluationController');
 const RequestStudentController = require('../app/controllers/RequestStudentController');
 const AppointmenController = require('../app/controllers/AppointmenController');
 const EnterprisesController = require('../app/controllers/EnterprisesController');
+const UniversityController = require('../app/controllers/UniversityController');
 
 const router = express.Router();
 
@@ -38,6 +39,7 @@ router.put('/appointment/', AppointmenController.modifyAppointmen);
 router.get('/appointment/:id(\\d+)', AppointmenController.getAppointment);
 
 /* Cerrar convocatoria */
+router.get('/programs', UniversityController.getPrograms);
 // router.put('/Convocatorias/cerrar/:id(\\d+)', AnnouncementController.editStatus);
 
 
