@@ -31,5 +31,3 @@ ConvocatoryMSResource.listAll = () => {
 
   return HTTPClient.get(url);
 }
-
-
