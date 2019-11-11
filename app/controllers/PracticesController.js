@@ -27,10 +27,10 @@ PracticesController.getTypePractice = async (req, res, next) => {
 };
 
 
-PracticesController.registerPractices = async (req, res, next) => {
+PracticesController.Registerpractices = async (req, res, next) => {
   const { body } = req;
   try {
-    const result = await PracticesServices.registerPractices(body);
+    const result = await PracticesServices.Registerpractices(body);
 
     return res.send(result);
   } catch (error) {
