@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const PracticesController = require('../app/controllers/PracticesController');
 const ConvocatoryController = require('../app/controllers/ConvocatoryController');
 const PracticeRequestController = require('../app/controllers/PracticeRequestController');
@@ -8,6 +8,7 @@ const RequestStudentController = require('../app/controllers/RequestStudentContr
 const AppointmenController = require('../app/controllers/AppointmenController');
 const EnterprisesController = require('../app/controllers/EnterprisesController');
 const UniversityController = require('../app/controllers/UniversityController');
+const RequestController = require('../app/controllers/RequestController');
 
 const router = express.Router();
 
