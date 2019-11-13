@@ -8,6 +8,7 @@ const RequestStudentController = require('../app/controllers/RequestStudentContr
 const AppointmenController = require('../app/controllers/AppointmenController');
 const EnterprisesController = require('../app/controllers/EnterprisesController');
 const UniversityController = require('../app/controllers/UniversityController');
+const RequestController = require('../app/controllers/RequestController');
 
 const router = express.Router();
 
@@ -51,5 +52,8 @@ router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 
 router.post('/empresas/company', EnterprisesController.registerEnterprise);
 router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.getEnterprise);
+
+
+router.get('/request', RequestController.getRequest);
 
 module.exports = router;
