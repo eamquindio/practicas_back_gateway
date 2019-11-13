@@ -52,4 +52,5 @@ router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 router.post('/empresas/company', EnterprisesController.registerEnterprise);
 router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.getEnterprise);
 
+router.get('/request', RequestController.getRequest);
 module.exports = router;
