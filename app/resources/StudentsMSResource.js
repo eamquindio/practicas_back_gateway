@@ -11,3 +11,9 @@ StudentsMSResources.getStudentsByIdList = (studentIdList) => {
 };
 
 StudentsMSResources.get = id => HTTPClient.get(`${BASE_URL}/students/${id}`);
+
+StudentsMSResources.getStudents = () => {
+  const url = `${BASE_URL}/students/all`;
+
+  return HTTPClient.get(url);
+};
