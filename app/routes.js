@@ -10,10 +10,6 @@ const EnterprisesController = require('../app/controllers/EnterprisesController'
 const UniversityController = require('../app/controllers/UniversityController');
 const RequestController = require('../app/controllers/RequestController');
 const StudentController = require('../app/controllers/StudentController');
-
-cerrarconvocatoria
-
- cerrarconvocatoria
 const router = express.Router();
 
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
