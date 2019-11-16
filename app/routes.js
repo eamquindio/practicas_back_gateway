@@ -8,6 +8,8 @@ const RequestStudentController = require('../app/controllers/RequestStudentContr
 const AppointmenController = require('../app/controllers/AppointmenController');
 const EnterprisesController = require('../app/controllers/EnterprisesController');
 const UniversityController = require('../app/controllers/UniversityController');
+const RequestController = require('../app/controllers/RequestController');
+const StudentController = require('../app/controllers/StudentController');
 
 cerrarconvocatoria
 
@@ -45,11 +47,21 @@ router.get('/appointment/:id(\\d+)', AppointmenController.getAppointment);
 router.get('/programs', UniversityController.getPrograms);
 // router.put('/Convocatorias/cerrar/:id(\\d+)', AnnouncementController.editStatus);
 
+/* Get Students */
+router.get('/students', StudentController.getStudents);
 
 router.put('/request_company/:id(\\d+)', PracticeRequestController.editStatus);
 router.put('/request_student/:id(\\d+)', PracticeRequestController.editStatus);
-router.post('/practices/start_practices', PracticesController.registerPractices);
+router.post('/practices/start_practices', PracticesController.Registerpractices);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 router.post('/convocatorias', ConvocatoryController.registerAnnouncement);
 
 module.exports = router;
+router.post('/empresas/company', EnterprisesController.registerEnterprise);
+router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.getEnterprise);
+
+
+router.get('/request', RequestController.getRequest);
+
+module.exports = router;
+
