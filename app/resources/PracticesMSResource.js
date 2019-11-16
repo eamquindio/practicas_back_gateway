@@ -11,7 +11,7 @@ PracticesMSResource.getPractices = () => {
 };
 
 PracticesMSResource.getTypePractices = () => {
-  const url = `${BASE_URL}/tipo_practica`;
+  const url = `${BASE_URL}/practiceType/all`;
 
   return HTTPClient.get(url);
 };
