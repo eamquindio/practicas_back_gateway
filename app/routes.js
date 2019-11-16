@@ -10,6 +10,7 @@ const EnterprisesController = require('../app/controllers/EnterprisesController'
 const UniversityController = require('../app/controllers/UniversityController');
 const RequestController = require('../app/controllers/RequestController');
 const StudentController = require('../app/controllers/StudentController');
+
 const router = express.Router();
 
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
@@ -63,5 +64,3 @@ router.get('/empresas/company/find_by_nit/:NIT(\\w+)', EnterprisesController.get
 router.get('/request', RequestController.getRequest);
 
 module.exports = router;
-
-
