@@ -14,6 +14,7 @@ const StudentController = require('../app/controllers/StudentController');
 const router = express.Router();
 
 router.get('/students/practices', PracticesController.getStudentsWithPractice);
+router.get('/practica/tipo_practica/', PracticesController.getTypePractice);
 /* Convocatory Routes */
 router.put('/convocatorias/:id(\\d+)', ConvocatoryController.modifyAnnouncement);
 router.get('/convocatorias/:id(\\d+)', ConvocatoryController.buildViewConvocatoryDetail);
